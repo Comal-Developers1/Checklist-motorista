@@ -9,7 +9,7 @@ if (isset($_POST['submit'])) {
         $usuario = "COMAL";
         $senha = "COMAL";
         $CLIENTEBanco = "WINT";
-        $host = "srvoracle"; // or Oracle server address
+        $host = "192.168.1.3"; // or Oracle server address
 
         $conn = oci_connect($usuario, $senha, $host . '/' . $CLIENTEBanco);
 
