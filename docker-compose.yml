@@ -1,0 +1,12 @@
+services:
+  checklist-comal:
+    image: comal/checklist-motorista:1.0.8
+
+
+    container_name: checklist-motorista
+    ports:
+      - "4007:80"        # Mapeia a porta 81 do host para a 80 do container (Apache)
+    environment:
+      - LD_LIBRARY_PATH=/usr/local/instantclient
+      - ORACLE_HOME=/usr/local/instantclient
+    restart: unless-stopped
